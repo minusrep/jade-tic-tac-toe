@@ -1,0 +1,39 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group = 'ru.vstu.lab5'
+version = '1.0.0'
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_1_8
+    targetCompatibility = JavaVersion.VERSION_1_8
+}
+
+repositories {
+    mavenCentral()
+}
+
+application {
+    // Основной запуск лабораторной — через стандартный GUI JADE.
+    mainClass = 'jade.Boot'
+}
+
+dependencies {
+    // Поместите файл JADE в каталог libs с точным именем jade.jar.
+    implementation files('libs/jade.jar')
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+// Запуск через GUI JADE: RMA + два агента, играющие друг против друга.
+tasks.register('runJadeGui', JavaExec) {
+    group = 'application'
+    description = 'Run JADE RMA GUI with two TicTacToe agents'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'jade.Boot'
+    args '-gui', '-agents', 'playerX:ru.vstu.lab5.agents.TicTacToeAgent(starter);playerO:ru.vstu.lab5.agents.TicTacToeAgent'
+}

@@ -1,0 +1,10 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="JADE GUI" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="jade.Boot" />
+    <module name="Lab5_TicTacToe_JADE.main" />
+    <option name="PROGRAM_PARAMETERS" value="-gui -agents &quot;playerX:ru.vstu.lab5.agents.TicTacToeAgent(starter);playerO:ru.vstu.lab5.agents.TicTacToeAgent&quot;" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>

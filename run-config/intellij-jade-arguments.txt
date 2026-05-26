@@ -1,0 +1,24 @@
+Основной запуск лабораторной — через стандартный GUI JADE.
+
+IntelliJ IDEA → Run → Edit Configurations → + → Application
+
+Name:
+JADE GUI
+
+Main class:
+jade.Boot
+
+Program arguments:
+-gui -agents "playerX:ru.vstu.lab5.agents.TicTacToeAgent(starter);playerO:ru.vstu.lab5.agents.TicTacToeAgent"
+
+Working directory:
+корневая папка проекта Lab5_TicTacToe_JADE
+
+После запуска откроется окно JADE RMA. В контейнере должны появиться агенты:
+- playerX
+- playerO
+- ams
+- df
+- rma
+
+Агенты playerX и playerO играют друг против друга, а в консоли выводятся их ходы.

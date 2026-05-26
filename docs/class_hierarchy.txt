@@ -1,0 +1,6 @@
+jade.core.Agent
+└── ru.vstu.lab5.agents.TicTacToeAgent
+    ├── jade.core.behaviours.TickerBehaviour
+    │   └── FindOpponentBehaviour
+    └── jade.core.behaviours.CyclicBehaviour
+        └── ReceiveGameMessagesBehaviour
